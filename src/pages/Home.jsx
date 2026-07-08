@@ -9,7 +9,7 @@ export default function Home({Logo}) {
    return (
       <>   
          
-         <div className="bg-[#181e1d]">
+         <div className="bg-[#181e1d] relative">
 
             <div className="w-[60%] max-md:w-[90%] mx-auto">
                <Hero Logo={Logo} motion={motion} AnimatePresence={AnimatePresence}/>

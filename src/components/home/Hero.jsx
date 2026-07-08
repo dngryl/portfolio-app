@@ -14,8 +14,8 @@ export default function Hero({motion, AnimatePresence}) {
 
    return (
        <>
-            <div className="font-paperlogy relative flex justify-center">
-                <div className="absolute w-full h-full bg-gradient-to-t from-[#181e1d] from-0% to-transparent to-100% z-10"></div>
+            <div className="font-paperlogy flex justify-center">
+                <div className="absolute w-full h-screen bg-gradient-to-t from-[#181e1d] from-0% to-transparent to-100% z-10"></div>
                 <div style={{ width: '100%', height: '100vh', position: 'absolute'}}>
                     <DotField
                     dotRadius={1.5}
