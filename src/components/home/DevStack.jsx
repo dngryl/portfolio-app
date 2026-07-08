@@ -22,8 +22,8 @@ export default function DevStack() {
    return (
        <>
             <div className="flex items-center flex-col h-full justify-center gap-2 px-6 relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#181e1d] -from-10% via-transparent via-50% to-[#181e1d] to-90% z-10 pointer-events-none"></div>
-                   <motion.div
+                <div className="overflow-hidden h-full absolute inset-0 bg-gradient-to-b from-[#181e1d] -from-10% via-transparent via-50% to-[#181e1d] to-90% z-10 pointer-events-none"></div>
+                <motion.div
                         className="transform-gpu backface-hidden antialiased flex flex-col w-full"
                         animate={{ y: ["0%", "-25%"] }}
                         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}

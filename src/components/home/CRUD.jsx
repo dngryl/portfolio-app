@@ -4,9 +4,13 @@ import check from "../../assets/icons/check-circle-light.svg"
 import CloseIcon from "../../assets/icons/x.svg?react";
 import editIcon from "../../assets/icons/pencil-line-light.svg";
 import saveIcon from "../../assets/icons/floppy-disk-back-light.svg";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { motion } from "motion/react";
 
 export default function CRUD() {
+    
+    const MotionCloseIcon = motion.create(CloseIcon)
+    
 
     const [toDoList, setToDoList] = useState([
         {id: 1, text: "React CRUD", done:false},
@@ -17,10 +21,31 @@ export default function CRUD() {
     const [toDoId, setToDoId] = useState(5)
     const [textInput, setTextInput] = useState("")
 
+    const showLottieRef = useRef(null);
+    const closeLottieRef = useRef(null);
+    const blankTimerRef = useRef(null);
+
+    const [blankAlert, setBlankAlert] = useState("idle")
+
     const addList = () => {
+        if(textInput === "") {
+            setBlankAlert("show")
+            showLottieRef.current?.setFrame(0)
+            showLottieRef.current?.play()
+
+            if (blankTimerRef.current) clearTimeout(blankTimerRef.current)
+            blankTimerRef.current = setTimeout(() => {
+                setBlankAlert("close")
+                closeLottieRef.current?.setFrame(0)
+                closeLottieRef.current?.play()
+            }, 1000)
+
+            return;
+        }
         setToDoList(prev => [...prev, {id:toDoId, text: textInput, done:false}])
         setToDoId(toDoId=> toDoId+1)
         setTextInput("")
+        setBlankAlert("idle")
     };
 
     const delList = (item) => {
@@ -80,7 +105,6 @@ export default function CRUD() {
         setEditId(null)
     };
 
-    
 
 
     return (
@@ -124,7 +148,7 @@ export default function CRUD() {
                     <div className="flex flex-row gap-2 justify-between w-full relative">
                         <p className="text-[10px] text-[#f9f9f9]/50 font-thin">길게 눌러 삭제하기</p>
                         <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                            <div className={`${toDoList.length === 0 ? "hidden" : "block"} flex flex-row gap-2`}>
+                            <div className={`${toDoList.length === 0 ? "hidden" : "block"} flex flex-row gap-2 cursor-pointer`}>
                                 <div className={`${pageNum ===0 ? "hidden" : "block"} rounded-full bg-[#f9f9f9]/25 w-2 aspect-square`} onClick={()=>prevPage()}></div>
                                 <div className="rounded-full bg-[#f9f9f9]/50 w-2 aspect-square" ></div>
                                 <div className={`${pageNum === totalPages-1 ? "hidden" : "block"} rounded-full bg-[#f9f9f9]/25 w-2 aspect-square`} onClick={()=>nextPage()}></div>
@@ -135,15 +159,28 @@ export default function CRUD() {
                 }
 
                 <div className="absolute -translate-x-1/2 -translate-y-1/2 top-46 left-1/2 flex items-center w-full justify-between text-[#f9f9f9]">
-                    <label className="flex flex-row gap-2 text-sm" onKeyDown={(event) => { if (event.key === 'Enter') addList() }}>
-                        메모 추가:
-                        <input type="text" className="w-50" placeholder="입력" value={textInput} onChange={(event) => setTextInput(event.target.value)} />
+                    <label className="flex flex-row gap-2 text-sm whitespace-nowrap shrink-0" onKeyDown={(event) => { if (event.key === 'Enter') addList() }}>
+                        메모:
+                        <input type="text" className="w-54 font-light" placeholder="내용을 입력하세요." value={textInput} onChange={(event) => setTextInput(event.target.value)} />
                     </label>
-                    <motion.div
-                        whileTap={{scale: 1}}
-                        transition={{ duration: 0.1, delay: 0, ease: "easeInOut" }}>
-                        <CloseIcon className="rotate-45 w-6 aspect-square cursor-pointer bg-[#00bf9f] rounded-full p-2" onClick={()=> addList()}></CloseIcon>
-                    </motion.div>
+                    <div className="relative w-16 h-16">
+                        <DotLottieReact
+                            dotLottieRefCallback={(instance) => { showLottieRef.current = instance; }}
+                            src={"/lottie/showAlert.json"} loop={false} autoplay={false}
+                            className={`${blankAlert === "show" ? "block" : "hidden"} absolute w-70 -translate-x-40 -translate-y-1/2 -top-4 left-1/2 pointer-events-none`} />
+                        <DotLottieReact
+                            dotLottieRefCallback={(instance) => { closeLottieRef.current = instance; }}
+                            src={"/lottie/closeAlert.json"} loop={false} autoplay={false}
+                            className={`${blankAlert === "close" ? "block" : "hidden"} absolute w-70 -translate-x-40 -translate-y-1/2 -top-4 left-1/2 pointer-events-none`} />
+                        <motion.div className="scale-65 absolute top-1/2 left-1/2 translate-x-0 -translate-y-1/2 w-15 h-15 flex items-center justify-center">
+                            <MotionCloseIcon
+                                initial={{ width: 40, height: 40 }}
+                                whileTap={{ width: 60, height: 60 }}
+                                transition={{ duration: 0.1, ease: "easeInOut" }}
+                                className="rotate-45 p-3 aspect-square cursor-pointer bg-[#00bf9f] focus:outline-none rounded-full" onClick={()=> addList()}></MotionCloseIcon>
+                        </motion.div>
+
+                    </div>
                 </div>
             </div>
         </>

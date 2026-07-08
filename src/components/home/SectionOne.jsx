@@ -27,10 +27,10 @@ export default function SectionOne({motion}) {
                         whileHover={{ y: -10 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="h-80 border rounded-2xl border-[#f9f9f9]/10 hover:border-[#f9f9f9]/20 backdrop-blur-2xl flex flex-col">
-                        <div className='relative w-full flex-1 min-h-0 scale-65 mt-6'>
+                        <div className='relative w-full flex-1 min-h-0 overflow-hidden'>
                             <IconInteraction motion={motion}/>
                         </div>
-                        <hr className="border-[#f9f9f9]/15 my-4" />
+                        <hr className="border-[#f9f9f9]/15 mb-2" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>
                             <p className='text-[#f9f9f9] md:text-sm text-lg font-bold'>프론트엔드, 거기에 디자인 툴까지</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>모션그래픽·3D 백그라운드에서 비롯된 시각적 감각을 코드로 구현합니다.</p>
