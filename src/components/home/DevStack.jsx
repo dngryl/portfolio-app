@@ -2,9 +2,9 @@ import framer from "../../assets/logos/stack/framer.svg";
 import html5 from "../../assets/logos/stack/html5.svg";
 import javascript from "../../assets/logos/stack/javascript.svg";
 import react from "../../assets/logos/stack/react.svg";
-import rive from "../../assets/logos/stack/rive.svg";
 import tailwindcss from "../../assets/logos/stack/tailwindcss.svg";
 import gsap from "../../assets/logos/stack/gsap.svg";
+import lottiefiles from "../../assets/logos/stack/lottiefiles.svg";
 import { motion } from "motion/react";
 
 export default function DevStack() {
@@ -16,14 +16,18 @@ export default function DevStack() {
         {id:3, tool: "Tailwind CSS", src: tailwindcss},
         {id:4, tool: "Framer Motion", src: framer},
         {id:5, tool: "GSAP", src: gsap},
-        {id:6, tool: "Rive", src: rive}
+        {id:6, tool: "LottieFiles", src: lottiefiles}
     ]
 
    return (
        <>
             <div className="flex items-center flex-col h-full justify-center gap-2 px-6 relative">
                 <div className="absolute inset-0 bg-gradient-to-b from-[#181e1d] -from-10% via-transparent via-50% to-[#181e1d] to-90% z-10 pointer-events-none"></div>
-                   <div className="animate-marquee-up transform-gpu backface-hidden antialiased flex flex-col w-full">
+                   <motion.div
+                        className="transform-gpu backface-hidden antialiased flex flex-col w-full"
+                        animate={{ y: ["0%", "-25%"] }}
+                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                   >
                     {[...DevArr, ...DevArr, ...DevArr, ...DevArr].map((item, i) => (
                         <motion.div
                             whileHover={{scale: 1.05}}
@@ -35,7 +39,7 @@ export default function DevStack() {
                             <p className="text-sm text-[#f9f9f9]">{item.tool}</p>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
        </>
    )
