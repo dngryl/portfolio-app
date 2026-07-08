@@ -1,16 +1,64 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+개인 포트폴리오 웹사이트입니다. React와 Tailwind CSS를 기반으로 제작되었으며, 부드러운 스크롤과 인터랙티브한 애니메이션을 통해 작업물과 기술 스택을 소개합니다.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: React 19, Vite
+- **Styling**: Tailwind CSS 4
+- **Animation**: Motion
+- **Scroll**: Lenis
+- **Etc**: Cornerkit
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 18+
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+├── assets/          # 폰트, 아이콘, 로고, 이미지
+├── components/
+│   ├── common/      # 공통 컴포넌트 (NavBar, BG, Lenis 등)
+│   └── home/        # 홈 페이지 전용 컴포넌트 (Hero, DevStack, CRUD 등)
+├── pages/           # 페이지 컴포넌트
+├── App.jsx
+└── main.jsx
+```
+
+## License
+
+Personal project. All rights reserved.
