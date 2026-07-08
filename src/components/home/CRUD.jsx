@@ -3,6 +3,7 @@ import unCheck from "../../assets/icons/circle-light.svg"
 import check from "../../assets/icons/check-circle-light.svg"
 import CloseIcon from "../../assets/icons/x.svg?react";
 import editIcon from "../../assets/icons/pencil-line-light.svg";
+import saveIcon from "../../assets/icons/floppy-disk-back-light.svg";
 import { motion } from "motion/react";
 
 export default function CRUD() {
@@ -67,11 +68,16 @@ export default function CRUD() {
     };
 
     const [editId, setEditId] = useState(null)
-    const [editInput, setEditInput] = useState(null)
+    const [editInput, setEditInput] = useState("")
 
     const editStart = (item) => {
         setEditId(item.id)
         setEditInput(item.text)
+    };
+
+    const editSave = (item) => {
+        setToDoList(prev => prev.map((p) => p.id === item.id ? { ...p, text:  editInput} : p))
+        setEditId(null)
     };
 
     
@@ -99,14 +105,14 @@ export default function CRUD() {
                                     <div className="flex flex-row items-center gap-2 ">
                                         <img src={item.done ? check : unCheck} className={`${item.done ? "opacity-50" : ""} cursor-pointer w-5 h-5`} onClick={()=> {editStatus(item)}} />
                                         {editId === item.id ?
-                                            <input type="text" className="text-xs text-[#f9f9f9]" placeholder="입력" value={editInput} onChange={(event) => setEditInput(event.target.value)} />
+                                            <input type="text" className="text-xs text-[#f9f9f9] w-22" placeholder="입력" value={editInput} onChange={(event) => setEditInput(event.target.value)} />
                                             :<p className={`${item.done ? "line-through text-[#f9f9f9]/50" : ""} text-xs`}>{item.text}</p>}
                                     </div>
                                 </div>
                                 <motion.img
                                     initial={{opacity: 0}}
                                     whileHover={{opacity: 1}}
-                                    src={editIcon} className="w-5 text-xs text-[#f9f9f9]/50" onClick={() => editStart(item)}/>
+                                    src={editId === item.id ? saveIcon:editIcon} className="w-5 text-xs text-[#f9f9f9]/50" onClick={() => editId === item.id ? editSave(item) :editStart(item)}/>
                             </motion.div>
                         )
                     })}
