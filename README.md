@@ -8,7 +8,6 @@
 - **Styling**: Tailwind CSS 4
 - **Animation**: Motion
 - **Scroll**: Lenis
-- **Etc**: Cornerkit
 
 ## Getting Started
 
