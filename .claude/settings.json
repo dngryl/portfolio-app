@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Rename-Item -Path \"c:\\\\DNGRYL\\\\Portfolio--\" -NewName \"Portfolio-App\" -ErrorAction Stop)",
+      "mcp__claude_ai_Vercel__deploy_to_vercel"
+    ]
+  }
+}
