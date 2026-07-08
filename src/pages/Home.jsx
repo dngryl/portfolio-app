@@ -14,8 +14,6 @@ export default function Home({Logo}) {
             <div className="w-[60%] max-md:w-[90%] mx-auto">
                <Hero Logo={Logo} motion={motion} AnimatePresence={AnimatePresence}/>
                <SectionOne motion={motion}/>
-               
-
             </div>
 
          </div>

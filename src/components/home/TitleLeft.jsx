@@ -26,41 +26,42 @@ export default function TitleLeft({swapped, setSwapped, motion, progress, progre
                 <div>
                     {!swapped ?
                         <div className="flex flex-row">
-                            <RainbowFont progress={progress} className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <RainbowFont progress={progress} className="text-6xl max-md:text-5xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 디자인
                             </RainbowFont>
-                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <p className="text-6xl max-md:text-5xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 을 
                             </p>
                         </div> : 
                         <div> 
-                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">코드로 디자인을</p>
+                            <p className="text-6xl max-md:text-5xl font-black text-[#f9f9f9] tracking-wide leading-snug">코드로 디자인을</p>
                         </div>
                     }
                     
                     {!swapped ?
                         <div className="flex flex-row">
-                            <RainbowFont progress={progress2} className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <RainbowFont progress={progress2} className="text-6xl max-md:text-5xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 코드 
                             </RainbowFont>
-                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <p className="text-6xl max-md:text-5xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 로 옮깁니다. 
                             </p>
                         </div> :
                         <div>
-                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">표현합니다.</p>
+                            <p className="text-6xl max-md:text-5xl font-black text-[#f9f9f9] tracking-wide leading-snug">표현합니다.</p>
                         </div>
                     }
                     
                 </div>
-                <p className="text-[#f9f9f9]/75 font-bold ">
-                    3D 모델링과 모션 그래픽을 거쳐
+                <p className="text-[#f9f9f9]/75 md:font-bold font-medium ">
+                    3D 모델링과 모션 그래픽을 거쳐&nbsp;
+                    <br className="md:hidden block"/>
                     이제는 코드로 화면을 만듭니다.
-                    <br />
-                    시각적인 감각으로 사용자가 마주하는
-                    화면을 직접 구현하는
-                    <br />
-                    프론트엔드 개발자 이동렬입니다.
+                    <br /><br className="md:hidden block"/>
+                    시각적인 감각으로 사용자가 마주하는&nbsp;화면을&nbsp;
+                    <br className="md:hidden block"/>
+                    직접 구현하는&nbsp;
+                    <br className="md:block hidden"/>프론트엔드 개발자 이동렬입니다.
                 </p>
                 <p className="rounded-xl bg-[#00bf9f] hover:bg-[#00ab8f] w-fit text-[#f9f9f9] px-4 py-2 font-bold">작업물 보기</p>
             </div>
