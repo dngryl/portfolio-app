@@ -32,7 +32,7 @@ export default function SectionOne({motion}) {
                         </div>
                         <hr className="border-[#f9f9f9]/15 my-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>
-                            <p className='text-[#f9f9f9] text-sm font-bold'>프론트엔드, 거기에 디자인 툴까지</p>
+                            <p className='text-[#f9f9f9] md:text-sm text-lg font-bold'>프론트엔드, 거기에 디자인 툴까지</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>모션그래픽·3D 백그라운드에서 비롯된 시각적 감각을 코드로 구현합니다.</p>
                         </div>
                     </motion.div>
@@ -50,7 +50,7 @@ export default function SectionOne({motion}) {
                         </div>
                         <hr className="border-[#f9f9f9]/15 my-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>
-                            <p className='text-[#f9f9f9] text-sm font-bold'>개발 스택</p>
+                            <p className='text-[#f9f9f9] md:text-sm text-lg font-bold'>개발 스택</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>HTML / CSS / JavaScript를 기반으로 React와 Tailwind CSS, Framer Motion을 주력으로 사용합니다.</p>
                         </div>
                     </motion.div>
@@ -68,7 +68,7 @@ export default function SectionOne({motion}) {
                         </div>
                         <hr className="border-[#f9f9f9]/15 mb-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>
-                            <p className='text-[#f9f9f9] text-sm font-bold'>3D 웹 & 3D 모델링</p>
+                            <p className='text-[#f9f9f9] md:text-sm text-lg font-bold'>3D 웹 & 3D 모델링</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>Cinema 4D 폴리곤 모델링과 Fusion 360 넙스 모델링으로 3D를 다뤄왔습니다. 이제 Blender와 Spline으로 그 감각을 웹 환경에 옮기고자 합니다.</p>
                         </div>
                     </motion.div>
@@ -84,7 +84,7 @@ export default function SectionOne({motion}) {
                         </div>
                         <hr className="border-[#f9f9f9]/15 my-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>
-                            <p className='text-[#f9f9f9] text-sm font-bold'>모션그래픽 - 인터랙션으로의 전환</p>
+                            <p className='text-[#f9f9f9] md:text-sm text-lg font-bold'>모션그래픽 - 인터랙션으로의 전환</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>After Effects로 다양한 분야의 모션그래픽과 2D 리깅을 다뤄왔습니다. 그 경험이 지금은 웹 애니메이션 감각으로 이어집니다.</p>
                         </div>
                     </motion.div>
@@ -102,7 +102,7 @@ export default function SectionOne({motion}) {
                         </div>
                         <hr className="border-[#f9f9f9]/15 mb-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>
-                            <p className='text-[#f9f9f9] text-sm font-bold'>CRUD & 상태 관리</p>
+                            <p className='text-[#f9f9f9] md:text-sm text-lg font-bold'>CRUD & 상태 관리</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>React 상태 관리와 fetch API를 기반으로 데이터를 다루는 로직을 연습합니다. CRUD, 페이지네이션, 필터, 검색까지 실무형 흐름으로 구현합니다.</p>
                         </div>
                     </motion.div>
