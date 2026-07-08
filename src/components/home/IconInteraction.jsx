@@ -5,7 +5,7 @@ import spline from "../../assets/logos/tools/Spline.webp";
 import affinity from "../../assets/logos/tools/Affinity.webp";
 import claude from "../../assets/logos/tools/Claude.webp";
 import codium from "../../assets/logos/tools/Codium.webp";
-import rive from "../../assets/logos/tools/Rive.webp";
+import afterEffects from "../../assets/logos/tools/AfterEffects.webp";
 import {useState } from "react";
 
 export default function IconInteraction({motion}) {
@@ -51,7 +51,7 @@ export default function IconInteraction({motion}) {
                     initial={{ x:0, y: 0, opacity: 0 }}
                     animate={{ x: showIcon ? -50:0 , y: showIcon ? 86.6 : 0, opacity: showIcon ? 100:0}}
                     transition={{ duration: 0.3, ease: "easeInOut", delay: showIcon ? 0.30 : 0, type: "spring", stiffness: 400, damping: 25}}
-                    src={rive} className="rounded-full w-14 h-14 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
+                    src={afterEffects} className="rounded-full w-14 h-14 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
                 
 
                 <motion.img

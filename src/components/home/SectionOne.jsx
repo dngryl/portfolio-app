@@ -84,7 +84,7 @@ export default function SectionOne({motion}) {
                         </div>
                         <hr className="border-[#f9f9f9]/15 my-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6'>
-                            <p className='text-[#f9f9f9] text-sm font-bold'>모션그래픽 - 인터랙션으로의 전환 (Rive)</p>
+                            <p className='text-[#f9f9f9] text-sm font-bold'>모션그래픽 - 인터랙션으로의 전환</p>
                             <p className='text-[#f9f9f9]/50 text-sm'>After Effects로 다양한 분야의 모션그래픽과 2D 리깅을 다뤄왔습니다. 그 경험이 지금은 웹 애니메이션 감각으로 이어집니다. <br/> <br/> </p>
                         </div>
                     </motion.div>
