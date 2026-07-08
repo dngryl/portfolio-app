@@ -45,7 +45,7 @@ export default function NavBar({Logo}) {
                         </motion.div>
                                     
                         <div className="md:block hidden border border-[#f9f9f9]/10 px-3 py-2 bg-[#f9f9f9]/10 cursor-pointer hover:bg-[#f9f9f9]/5 backdrop-blur-2xl rounded-lg">
-                                <a href="https://github.com/dngryl" className="flex flex-row items-center gap-2"><img src={github} className="w-5"/>GitHub</a>
+                            <a href="https://github.com/dngryl" className="flex flex-row items-center gap-2"><img src={github} className="w-5"/>GitHub</a>
                         </div>
 
                     </div>  
