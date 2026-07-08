@@ -6,7 +6,7 @@ export default function TitleLeft({swapped, setSwapped, motion, progress, progre
    return (
        <>
            <div className="flex flex-col gap-6 w-full">
-                <div className="grid grid-cols-2 h-10 w-100 gap-2 rounded-lg relative place-items-center border text-[#f9f9f9] border-[#f9f9f9]/10 px-3 py-1 backdrop-blur-2xl">
+                <div className="grid grid-cols-2 h-10 w-100 max-md:w-full gap-2 rounded-lg relative place-items-center border text-[#f9f9f9] border-[#f9f9f9]/10 px-3 py-1 backdrop-blur-2xl">
                     <motion.div
                         initial={{ right: "8px" }}
                         animate={{ left: !swapped ? "8px" : "" }}
@@ -26,29 +26,29 @@ export default function TitleLeft({swapped, setSwapped, motion, progress, progre
                 <div>
                     {!swapped ?
                         <div className="flex flex-row">
-                            <RainbowFont progress={progress} className="text-6xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <RainbowFont progress={progress} className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 디자인
                             </RainbowFont>
-                            <p className="text-6xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 을 
                             </p>
                         </div> : 
                         <div> 
-                            <p className="text-6xl font-black text-[#f9f9f9] tracking-wide leading-snug">코드로 디자인을</p>
+                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">코드로 디자인을</p>
                         </div>
                     }
                     
                     {!swapped ?
                         <div className="flex flex-row">
-                            <RainbowFont progress={progress2} className="text-6xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <RainbowFont progress={progress2} className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 코드 
                             </RainbowFont>
-                            <p className="text-6xl font-black text-[#f9f9f9] tracking-wide leading-snug">
+                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">
                                 로 옮깁니다. 
                             </p>
                         </div> :
                         <div>
-                            <p className="text-6xl font-black text-[#f9f9f9] tracking-wide leading-snug">표현합니다.</p>
+                            <p className="text-6xl max-md:text-4xl font-black text-[#f9f9f9] tracking-wide leading-snug">표현합니다.</p>
                         </div>
                     }
                     

@@ -14,12 +14,12 @@ export default function SectionOne({motion}) {
 
     return (
         <>
-            <div className="font-paperlogy w-full h-[100vh] flex items-center justify-center">
+            <div className="font-paperlogy w-full h-[100vh] max-md:h-auto max-md:py-24 flex items-center justify-center">
 
                 <div className='flex flex-col w-full gap-6 relative'>
-                    <p className="text-4xl font-bold text-[#f9f9f9] tracking-wide mb-10">Skills & Background</p>
+                    <p className="text-4xl max-md:text-3xl font-bold text-[#f9f9f9] tracking-wide mb-10">Skills & Background</p>
 
-                    <div className='grid grid-cols-3 w-full gap-6 place-content-between'>
+                    <div className='grid grid-cols-3 max-md:grid-cols-1 w-full gap-6 place-content-between'>
                     
                     <motion.div
                         whileInView={{ y: 0, opacity: 1}}
@@ -60,7 +60,7 @@ export default function SectionOne({motion}) {
                         initial={{ y: 200,  opacity: 0}}
                         whileHover={{ y: -10 }}
                         transition={{ duration: 0.3, delay: 0.4, ease: "easeInOut" }}
-                        className="row-span-2 border rounded-2xl border-[#f9f9f9]/10 hover:border-[#f9f9f9]/20 backdrop-blur-2xl flex flex-col">
+                        className="row-span-2 max-md:row-span-1 max-md:order-5 max-md:h-160 border rounded-2xl border-[#f9f9f9]/10 hover:border-[#f9f9f9]/20 backdrop-blur-2xl flex flex-col">
                         <div className='relative w-full h-full flex justify-center overflow-hidden'>
                             <spline-viewer
                                 url="https://prod.spline.design/9SbFqL8Lea8RLHEh/scene.splinecode"

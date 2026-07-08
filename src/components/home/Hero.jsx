@@ -14,7 +14,7 @@ export default function Hero({motion, AnimatePresence}) {
 
    return (
        <>
-            <div className="font-paperlogy flex justify-center">
+            <div className="font-paperlogy relative flex justify-center">
                 <div className="absolute w-full h-full bg-gradient-to-t from-[#181e1d] from-0% to-transparent to-100% z-10"></div>
                 <div style={{ width: '100%', height: '100vh', position: 'absolute'}}>
                     <DotField
@@ -33,8 +33,8 @@ export default function Hero({motion, AnimatePresence}) {
                     />
                 </div>
 
-                <div className="flex justify-center items-center w-full h-[100vh] z-10">
-                    <div className="grid grid-cols-2 gap-48 text-nowrap items-center w-full">
+                <div className="flex justify-center items-center w-full h-[100vh] max-md:h-auto max-md:min-h-screen max-md:py-32 z-10">
+                    <div className="grid grid-cols-2 gap-48 text-nowrap items-center w-full max-md:grid-cols-1 max-md:gap-16 max-md:text-wrap">
 
                         <motion.div
                             layoutId="A"
@@ -43,13 +43,14 @@ export default function Hero({motion, AnimatePresence}) {
                         </motion.div>
                         <motion.div
                             layoutId="B"
-                            style={{ order: swapped ? 1: 2}}>
+                            style={{ order: swapped ? 1: 2}}
+                            className="max-md:w-full max-md:h-96">
                             <TitleRight swapped={swapped} motion={motion} progress2={progress2} progress={progress} AnimatePresence={AnimatePresence}/>
                         </motion.div>
 
                     </div>
                 </div>
-            </div> 
+            </div>
        </>
    )
 }

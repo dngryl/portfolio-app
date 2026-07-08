@@ -8,14 +8,14 @@ export default function NavBar({Logo}) {
     const width = useTransform(scrollY, [0, 300], ["90%", "60%"]);
     const backdropBlur= useTransform(scrollY, [0, 300], ["blur(0px)", "blur(40px)"]);
     const border = useTransform(scrollY,  [0, 300], ["0px solid rgba(255,255,255,0)", "1px solid rgba(255,255,255,0.1)"] );
-   
+
     const [likeCount, setLikeCount] = useState(0)
 
     return (
-        <>  
+        <>
             <motion.div
                 style={{width, backdropFilter:backdropBlur, border}}
-                className="font-paperlogy fixed items-center mt-10 z-99 border border-[#181e1d]/5 rounded-2xl">
+                className="font-paperlogy fixed items-center mt-10 z-99 border border-[#181e1d]/5 rounded-2xl max-md:w-[90%]!">
                 <div className="flex justify-between px-3 py-2 text-sm text-[#f9f9f9] ">
                     <div className="flex flex-row items-center gap-6 ">
                         <div className="flex flex-row gap-2 items-center">
