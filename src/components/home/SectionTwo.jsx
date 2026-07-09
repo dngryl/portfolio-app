@@ -15,6 +15,8 @@ import GithubIcon from "../../assets/logos/svg/github.svg?react"
 import NotionIcon from "../../assets/logos/svg/notion.svg?react"
 import ClaudeIcon from "../../assets/logos/svg/claude.svg?react"
 import VercelIcon from "../../assets/logos/svg/vercel.svg?react"
+import SplineIcon from "../../assets/logos/svg/spline.svg?react"
+import CursorIcon from "../../assets/logos/svg/cursor.svg?react"
 
 export default function SectionTwo() {
 
@@ -125,6 +127,8 @@ export default function SectionTwo() {
                                                 <div className="w-px h-[90%] bg-[#181e1d]/50" />
                                                 <ClaudeIcon className="w-10" />
                                                 <div className="w-px h-[90%] bg-[#181e1d]/50" />
+                                                <CursorIcon className="w-10" />
+                                                <div className="w-px h-[90%] bg-[#181e1d]/50" />
                                                 <VercelIcon className="w-10" />
                                                 <div className="w-px h-[90%] bg-[#181e1d]/50" />
                                                 <NotionIcon className="w-10" />
@@ -136,6 +140,8 @@ export default function SectionTwo() {
                                                 <AfterEffectsIcon className="w-10" />
                                                 <div className="w-px h-[90%] bg-[#181e1d]/50" />
                                                 <BlenderIcon className="w-10" />
+                                                <div className="w-px h-[90%] bg-[#181e1d]/50" />
+                                                <SplineIcon className="w-10" />
                                                 <div className="w-px h-[90%] bg-[#181e1d]/50" />
                                                 <AffinityIcon className="w-10" />
                                             </div>
