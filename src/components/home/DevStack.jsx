@@ -1,22 +1,22 @@
-import framer from "../../assets/logos/stack/framer.svg";
-import html5 from "../../assets/logos/stack/html5.svg";
-import javascript from "../../assets/logos/stack/javascript.svg";
-import react from "../../assets/logos/stack/react.svg";
-import tailwindcss from "../../assets/logos/stack/tailwindcss.svg";
-import gsap from "../../assets/logos/stack/gsap.svg";
-import lottiefiles from "../../assets/logos/stack/lottiefiles.svg";
+import FramerIcon from "../../assets/logos/stack/framer.svg?react";
+import Html5Icon from "../../assets/logos/stack/html5.svg?react";
+import JavascriptIcon from "../../assets/logos/stack/javascript.svg?react";
+import ReactIcon from "../../assets/logos/stack/react.svg?react";
+import TailwindcssIcon from "../../assets/logos/stack/tailwindcss.svg?react";
+import GsapIcon from "../../assets/logos/stack/gsap.svg?react";
+import LottiefilesIcon from "../../assets/logos/stack/lottiefiles.svg?react";
 import { motion } from "motion/react";
 
 export default function DevStack() {
 
     const DevArr = [
-        {id:0, tool: "Java Scripts", src: javascript},
-        {id:1, tool: "React", src: react},
-        {id:2, tool: "HTML", src: html5},
-        {id:3, tool: "Tailwind CSS", src: tailwindcss},
-        {id:4, tool: "Framer Motion", src: framer},
-        {id:5, tool: "GSAP", src: gsap},
-        {id:6, tool: "LottieFiles", src: lottiefiles}
+        {id:0, tool: "Java Scripts", Icon: JavascriptIcon},
+        {id:1, tool: "React", Icon: ReactIcon},
+        {id:2, tool: "HTML", Icon: Html5Icon},
+        {id:3, tool: "Tailwind CSS", Icon: TailwindcssIcon},
+        {id:4, tool: "Framer Motion", Icon: FramerIcon},
+        {id:5, tool: "GSAP", Icon: GsapIcon},
+        {id:6, tool: "LottieFiles", Icon: LottiefilesIcon}
     ]
 
    return (
@@ -34,7 +34,7 @@ export default function DevStack() {
                             transition={{ duration: 0.2, ease: "easeInOut" }}
                             key={i}
                             className="mb-2 flex flex-row gap-3 p-2 w-full h-10 text-nowrap items-center rounded-lg backdrop-blur-2xl border border-[#f9f9f9]/10 shadow-black/25 shadow-xl">
-                            <img src={item.src} className="w-6"/>
+                            <item.Icon className="w-6 text-[#00bf9f]"/>
                             <div className="w-[1px] h-full bg-[#f9f9f9]/10" />
                             <p className="text-sm text-[#f9f9f9]">{item.tool}</p>
                         </motion.div>

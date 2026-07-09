@@ -23,9 +23,9 @@ export default function NavBar({Logo}) {
                             <p className="font-black">Dong Ryeul</p>
                         </div>
                         <p className="md:block hidden">/</p>
-                        <p className="md:block hidden">Hi</p>
-                        <p className="md:block hidden">Hello</p>
-                        <p className="md:block hidden">Thank</p>
+                        <p className="md:block hidden">I'm</p>
+                        <p className="md:block hidden">Fine</p>
+                        <p className="md:block hidden">Thanks</p>
                         <p className="md:block hidden">And</p>
                         <p className="md:block hidden">You?</p>
                     </div>
