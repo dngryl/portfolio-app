@@ -53,7 +53,7 @@ export default function TitleLeft({swapped, setSwapped, motion, progress, progre
                     }
                     
                 </div>
-                <p className="text-[#f9f9f9]/75 md:font-bold font-medium ">
+                <p className="text-[#f9f9f9]/75">
                     3D 모델링과 모션 그래픽을 거쳐&nbsp;
                     <br className="md:hidden block"/>
                     이제는 코드로 화면을 만듭니다.
