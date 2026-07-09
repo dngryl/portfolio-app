@@ -8,8 +8,8 @@ export default function TitleLeft({swapped, setSwapped, motion, progress, progre
            <div className="flex flex-col gap-6 w-full">
                 <div className="grid grid-cols-2 h-10 w-100 max-md:w-full gap-2 rounded-lg relative place-items-center border text-[#f9f9f9] border-[#f9f9f9]/10 px-3 py-1 backdrop-blur-2xl">
                     <motion.div
-                        initial={{ right: "8px" }}
-                        animate={{ left: !swapped ? "8px" : "" }}
+                        initial={false}
+                        animate={{ left: !swapped ? "8px" : "",  right: swapped ? "8px":""  }}
                         transition={{ duration: 0.3, delay: 0, ease: "easeInOut" }}
 
                         className="bg-[#00bf9f] absolute rounded-md -translate-y-1/2 top-1/2 w-[48%] h-[70%] -z-10">

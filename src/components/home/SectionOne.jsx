@@ -1,16 +1,9 @@
-import { useEffect } from "react";
+import Spline from "@splinetool/react-spline";
 import IconInteraction from "./IconInteraction";
 import DevStack from "./DevStack";
 import CRUD from "./CRUD";
 
 export default function SectionOne({motion}) {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.type = 'module';
-        script.src = 'https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js';
-        document.body.appendChild(script);
-        return () => document.body.removeChild(script);
-    }, []);
 
     return (
         <>
@@ -62,9 +55,11 @@ export default function SectionOne({motion}) {
                         transition={{ duration: 0.3, delay: 0.4, ease: "easeInOut" }}
                         className="row-span-2 max-md:row-span-1 max-md:order-5 max-md:h-160 border rounded-2xl border-[#f9f9f9]/10 hover:border-[#f9f9f9]/20 backdrop-blur-2xl flex flex-col">
                         <div className='relative w-full flex-1 min-h-0 flex justify-center overflow-hidden'>
-                            <spline-viewer
-                                url="https://prod.spline.design/9SbFqL8Lea8RLHEh/scene.splinecode"
-                                className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-full w-auto touch-none" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full aspect-430/530 touch-none">
+                                <Spline
+                                    scene="https://prod.spline.design/9SbFqL8Lea8RLHEh/scene.splinecode"
+                                    style={{ width: '100%', height: '100%' }} />
+                            </div>
                         </div>
                         <hr className="border-[#f9f9f9]/15 mb-4" />
                         <div className='px-6 flex flex-col gap-2 mb-6 min-h-27'>

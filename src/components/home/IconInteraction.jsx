@@ -33,24 +33,24 @@ export default function IconInteraction({motion}) {
                 </motion.div>
                 {!showIcon && <div>
                     <MotionCircle
-                        initial={{ scale: 0, opacity:1 }}
-                        animate={{ scale: 3, opacity:0 }}
-                        exit={{ scale: 0,}}
-                        transition={{ duration: 1, repeat:Infinity, repeatType: "loop", ease: "easeInOut" }}
+                        initial={{ width: 0, height: 0, opacity:1 }}
+                        animate={{ width: 300, height: 300, opacity:0 }}
+                        exit={{ width: 0, height: 0,}}
+                        transition={{ duration: 2, repeat:Infinity, repeatType: "loop", ease: "easeInOut" }}
                         className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                     />
                     <MotionCircle
-                        initial={{ scale: 0, opacity:1 }}
-                        animate={{ scale: 3, opacity:0 }}
-                        exit={{ scale: 0,}}
-                        transition={{ duration: 1,delay:0.2, repeat:Infinity, repeatType: "loop", ease: "easeInOut" }}
+                        initial={{ width: 0, height: 0, opacity:1 }}
+                        animate={{ width: 300, height: 300, opacity:0 }}
+                        exit={{ width: 0, height: 0,}}
+                        transition={{ duration: 2,delay:0.67, repeat:Infinity, repeatType: "loop", ease: "easeInOut" }}
                         className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                     />
                     <MotionCircle
-                        initial={{ scale: 0, opacity:1 }}
-                        animate={{ scale: 3, opacity:0 }}
-                        exit={{ scale: 0,}}
-                        transition={{ duration: 1,delay:0.4, repeat:Infinity, repeatType: "loop", ease: "easeInOut" }}
+                        initial={{ width: 0, height: 0, opacity:1 }}
+                        animate={{ width: 300, height: 300, opacity:0 }}
+                        exit={{ width: 0, height: 0,}}
+                        transition={{ duration: 2,delay:1.33, repeat:Infinity, repeatType: "loop", ease: "easeInOut" }}
                         className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                     />
                 </div>}
