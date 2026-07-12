@@ -5,6 +5,7 @@ import SectionOne from "../components/home/SectionOne";
 import SectionTwo from "../components/home/SectionTwo";
 import Loading from "../components/common/loading";
 import { useState } from "react";
+import SectionThree from "../components/home/SectionThree";
 
 
 export default function Home({Logo}) {
@@ -28,6 +29,7 @@ export default function Home({Logo}) {
                      <Hero Logo={Logo} motion={motion} AnimatePresence={AnimatePresence}/>
                      <SectionOne motion={motion}/>
                      <SectionTwo motion={motion}/>
+                     <SectionThree motion={motion}/>
                   </motion.div>
                }
             </AnimatePresence>

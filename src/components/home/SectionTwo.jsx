@@ -29,7 +29,7 @@ export default function SectionTwo() {
 
                 <div className=" h-screen sticky top-0 flex items-center justify-center overflow-hidden">
                     <div className="w-full h-[90%] rounded-2xl">
-                        <div className="h-full w-full grid grid-cols-2 px-50 relative ">
+                        <div className="h-full w-full grid grid-cols-2 gap-10 px-50 relative">
                             <div className="text-[#f9f9f9] absolute top-0 left-0 mt-20">
                                 <p className="bg-[#00bf9f] rounded-lg mx-10 text-[#181e1d] w-20 h-20 flex font-bold items-center justify-center text-4xl">I'm</p>
                             </div>
@@ -71,7 +71,7 @@ export default function SectionTwo() {
                 <div className=" h-screen sticky top-0 flex items-center justify-center overflow-hidden">
                     <div className="bg-[#f9f9f9] w-full h-[90%] rounded-2xl">
 
-                         <div className="h-full w-full grid grid-cols-2 gap-20 px-50 relative">
+                         <div className="h-full w-full grid grid-cols-2 gap-10 px-50 relative">
                             <div className="absolute top-0 left-0 mt-20">
                                 <p className="bg-[#00bf9f] mx-10 rounded-lg text-[#f9f9f9] w-20 h-20 flex font-bold items-center justify-center text-2xl">Fine</p>
                             </div>
@@ -206,7 +206,7 @@ export default function SectionTwo() {
                     <div className="bg-[#f9f9f9] w-full h-[90%] rounded-2xl">
                         <div className="h-full w-full grid grid-cols-2 px-50 relative ">
                             <div className="absolute top-0 left-0 mt-20">
-                                <p className="bg-[#00bf9f] mx-10 rounded-lg text-[#f9f9f9] w-20 h-20 flex font-bold items-center justify-center text-2xl">AND</p>
+                                <p className="bg-[#00bf9f] mx-10 rounded-lg text-[#f9f9f9] w-20 h-20 flex font-bold items-center justify-center text-2xl">And</p>
                             </div>
 
                             <div className="text-[#181e1d] flex flex-col gap-6 justify-center">
@@ -241,6 +241,7 @@ export default function SectionTwo() {
                             </div>
 
                         </div>
+
                     </div>
                 </div>
 
