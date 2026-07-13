@@ -4,7 +4,12 @@
       "PowerShell(Rename-Item -Path \"c:\\\\DNGRYL\\\\Portfolio--\" -NewName \"Portfolio-App\" -ErrorAction Stop)",
       "mcp__claude_ai_Vercel__deploy_to_vercel",
       "PowerShell(npx --yes chromium-cli --help 2>&1)",
-      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:5174/\" -UseBasicParsing)"
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:5174/\" -UseBasicParsing)",
+      "PowerShell(Get-Command npx -ErrorAction SilentlyContinue)",
+      "Read(//c/Users/DW/AppData/Local/ms-playwright/**)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\npm-cache\\\\_npx\" -Recurse -Directory -Filter \"playwright\" -ErrorAction SilentlyContinue | Select-Object -First 5 FullName)",
+      "PowerShell(cd \"c:\\\\DNGRYL\\\\portfolio-app\"; node --experimental-specifier-resolution=node -e \"1\" 2>&1 | Out-Null; $env:NODE_PATH=\"C:\\\\Users\\\\DW\\\\AppData\\\\Local\\\\npm-cache\\\\_npx\\\\e41f203b7505f1fb\\\\node_modules\"; node \"C:\\\\Users\\\\DW\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--DNGRYL-portfolio-app\\\\692905fb-3a20-441e-a72e-acb4139a88db\\\\scratchpad\\\\verify-scroll.mjs\" 2>&1 | Select-Object -Last 200)",
+      "Read(//c/Users/DW/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/**)"
     ]
   }
 }

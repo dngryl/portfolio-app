@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { useScroll, useTransform } from "motion/react"
 import Fine from "./Fine"
 import Thanks from "./Thanks"
 
@@ -7,6 +8,13 @@ export default function SectionTwo({motion}) {
 
 
     const [hoverId, setHoverId] = useState(null)
+    const careerWrapperRef = useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: careerWrapperRef,
+        offset: ["start start", "end end"],
+    })
+    const careerTrackX = useTransform(scrollYProgress, [0, 1], ["0%", "-33.3334%"])
 
     const identityStack = [
         {id: 1, name1: "Framer Motion", name2: "Interaction"},
@@ -77,6 +85,7 @@ export default function SectionTwo({motion}) {
                 <Thanks />
 
 
+                <div ref={careerWrapperRef} className="relative h-[200vh]">
                 <div className=" h-screen sticky top-0 flex items-center justify-center overflow-hidden">
                     <div className="bg-[#f9f9f9] w-full h-[90%] rounded-2xl">
                         <div className="h-full w-full flex flex-col justify-center gap-10 relative ">
@@ -97,9 +106,9 @@ export default function SectionTwo({motion}) {
                                     </div>
                                 </div>
 
-                                <div className="text-[#181e1d] w-full px-10">
-                                    <div className="w-[150%] flex flex-col">
-                                        <div className="h-50">
+                                <div className="text-[#181e1d] w-full px-10 overflow-hidden">
+                                    <motion.div style={{x: careerTrackX}} className="w-[150%] flex flex-col">
+                                        <div>
 
                                             <div className="grid grid-cols-5 gap-4 items-center relative">
                                                 <div className="bg-[#00bf9f] w-5 aspect-square rounded-full mb-1.5 z-20"></div>
@@ -178,19 +187,20 @@ export default function SectionTwo({motion}) {
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </motion.div>
 
                                 </div>
 
                             </div>
 
-                            
+
 
                         </div>
-                    
-                        
+
+
 
                     </div>
+                </div>
                 </div>
 
             </div>
