@@ -14,7 +14,7 @@ export default function Home({Logo}) {
    return (
       <>
 
-         <div className="bg-[#181e1d] relative min-h-screen w-full">
+         <div className="bg-[#181e1d] relative min-h-screen w-full select-none">
             
             <AnimatePresence mode="wait">
                {visible ?
